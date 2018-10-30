@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dakl/C++/uebung09/src/SparseVector.cpp
+SparseVector.hpp
+/home/dakl/C++/uebung09/src/SparseVector.hpp
+cmath
+-
+iostream
+-
+stdexcept
+-
+
+/home/dakl/C++/uebung09/src/SparseVector.hpp
+cassert
+-
+

@@ -1,0 +1,46 @@
+Aufgabe 1: Pointerarithmetik
+
+Es seien feld ein int-Array p, p1, p2 int-Zeiger und i eine int-Variable. Welche der folgenden Zuweisungen sind zulässig und welche nicht? Begründen Sie ihre Antwort!
+
+a) p = feld;
+Ist zulässig, da feld die Adresse des ersten Eintrags aus dem Array enthält. Diese Zuweisung ist äquivalent zu "p = &feld[0];".
+
+b) feld = p; 
+Nicht zulässig. feld ist die Adresse des ersten elements aus dem Array (feld == &feld[0]). Man darf Adressen nicht verändern, sonst könnte es z.B. zweimal die selbe Adresse geben.
+
+c) p = &feld[3];
+ feld ist ein Integer Array, feld[3] ist ein Integer und somit kann die Adresse von feld[3] problemlos an den Int-Pointer p übergeben werden.
+
+d) feld[2] = p[5];
+Der Ausdruck ist zulässig. man sollte jedoch bei der Benutzung aufpassen. "p[5]" ist das selbe wie "( *(p+5))". Wenn z.B. p vorher auf das erste Element eines Arrays gezeigt hat, zeigt es nun auf das sechste. Wenn dieses Array nun eine Länge von <=5 gehabt hat, zeigt p jetzt auf Datenmüll. 
+
+e) p1 = p2 + i;
+Ist zulässig. *p1 zeigt nun auf das Element das in der Adresse "p2 + i"  liegt.
+(Die Zahl i wird nicht direkt mit der Adresse p2 addiert, sondern verschiebt sie um ein Vielfaches der Bytezahl des Typen. Integer haben 4 Byte also wird die Adresse p2 mit der Zahl i*4 addiert.)   
+
+
+f) p1 = i + p2;
+Ist das selbe wie e). (Adresse + Offset) == (Offset + Adresse).
+
+g) i = p1 * p2;
+Ist in C nicht zulässig. Es gibt keine Situation in denen das multiplizieren von Adressen nützlich wäre.
+
+
+h) i = p1 - p2;
+Ist zulässig. Hier bekommt i der Abstand (offset) von den Elementen zugewiesen.
+
+i) i = p1 + p2;
+Ist in C nicht zulässig. Es gibt keine Situation in denen das multiplizieren von Adressen nützlich wäre.
+
+
+Erklären sie darüber hinaus, wie der [][]-Zugriff bei zweidimensionalen Arrays aussieht.
+
+Antwort: array[i][j] ist das selbe wie ( *( *(array + i) + j))
+
+
+Eine nette Möglichkeit verwirrenden Programmcode zu generieren ist es, Array-Namen und Index zu vertauschen, d.h. feld[i] stellt den selben Zugriff wie i[feld] dar. Warum ist das so? Geben sie Ihre Antworten und Begründungen schriftlich ab.
+
+Antwort: feld[i] ist das selbe wie ( *(feld + i))
+         i[feld] ist das selbe wie ( *(i + feld))
+
+         ( *(feld + i)) == ( *(i + feld)) <--- siehe e) und f).

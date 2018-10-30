@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/stest.dir/src/SparseVector.cpp.o CMakeFiles/stest.dir/src/SparseMatrix.cpp.o CMakeFiles/stest.dir/src/AAAtest.cpp.o  -o stest -rdynamic 

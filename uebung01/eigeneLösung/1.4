@@ -1,0 +1,37 @@
+Wo liegen unter Linux standardmäßig die vorhandenen Header- und Bibliotheksdateien?
+
+-/usr[/local]/lib/ = Libaries(Bibliotheken)
+-/usr[/local]/include/ = Header
+
+Welche Unix-Umgebungsvariablen legen die Pfade fest, in denen gcc nach verfügbaren
+Header-Dateien und Bibliotheken sucht?
+
+- LIBARY_PATH
+
+Erklären Sie die Bedeutung der gcc-Parameter -I, -L, -l
+
+-I = lässt den Präprozessor nach Headern durchsuchen
+-L = lässt den Präprozessor nach Libaries durchsuchen
+-l = verlinkt eine Bibliothek
+
+
+
+Was ist der unterschied zwischen #include "header.h" und #include
+<header.h>?
+
+-"header.h" = der Präprozessor sucht im Verzeichnis indem das Programm liegt
+
+-<header.h> = der Präprozessor sucht in den Systemverzeichnissen
+
+
+Erklären Sie den Unterschied zwischen statischenund dynamischen Linken. Wie können
+Sie statisches Linken erzwingen? Welche Konsequenzen hat das?
+
+-Der Unterschied liegt darin, das beim statischen linken der Code der Bibliothek in das Programm gebunden wird. Beim dynamischen linken ruft das Programm beim Ausführen die Bibliothek erst auf. Es wird nur in der Binary geschrieben welche Bibliothek benötigt wird.
+
+-man müsste gcc mit -static, -bstatic mitteilen das es die Libaries statisch binden soll.
+
+
+Welche Informationen liefert Ihnen das Linux-Tool ldd?
+
+-ldd zeigt an, welche Bibliotheken benötigt werden.

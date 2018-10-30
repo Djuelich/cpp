@@ -1,0 +1,29 @@
+1.1	
+-Wall					zeigt jegliche Fehlermeldungen an
+-Wstrict-prototypes			erzwingt Parameterangabe
+-ansi					erlaubt nur konformes Coding
+-pedantic				gibt nicht konformen Code als Fehlermeldung aus
+
+1.4
+
+1.					unter usr/lib/
+
+2.					
+
+3.
+-I					-Idir sucht im angegebenen Verzeichnis nach den headern
+-L					-Lname fuegt name zur Liste der Verzeichnisse fuer Linkoperationen hinzu
+-l					analog zu -L
+4.					#include "header.h" wird fuer benutzerdefinierte headerdateien verwendet, waehrend 
+					<> fuer im  system vorhandene headerdateien steht
+
+5.					statisch kopiert Bibliothek und bindet an die Anwendung
+					dynamisch Bibliothek befindet sich auf dem Computer und wird 
+					für die Anwendung benötigt
+					-Wl -Bstatic -"Libraryname"
+					gcc -static
+					Anwendung wird durch Anbindung der Library groesser, Library
+					wird nicht automatisch mit updates verseheAnwendung wird durch Anbindung der Library groesser, Library
+					wird nicht automatisch mit updates versehen
+6.					gibt benötigten Libraries auf Konsole aus
+                                                            

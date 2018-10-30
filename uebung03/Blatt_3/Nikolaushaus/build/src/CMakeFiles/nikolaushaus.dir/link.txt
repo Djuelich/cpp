@@ -1,0 +1,1 @@
+/usr/bin/cc  -g -Wall    CMakeFiles/nikolaushaus.dir/nikolaushaus.c.o  -o nikolaushaus -rdynamic -Wl,-Bstatic -lSDL2main -Wl,-Bdynamic -lSDL2 -lpthread 

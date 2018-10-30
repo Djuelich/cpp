@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/joker/Schreibtisch/christian03-assignments/uebung03/Blatt_3/Nikolaushaus/src/nikolaushaus.c
+SDL2/SDL.h
+-
+

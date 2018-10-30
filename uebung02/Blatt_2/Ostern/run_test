@@ -1,0 +1,11 @@
+#! /bin/sh
+
+output=`./easter < years.in > easter_dates.out && diff -qbB easter_dates.out  correct_easter_dates.out`
+
+if [ $? -eq 0 ]
+then
+    echo Test succeeded.
+else
+    echo Test failed.
+fi
+

@@ -1,0 +1,9 @@
+pi: pi.c
+	gcc -Wall -Wstrict-prototypes -ansi -pedantic pi.c -o pi
+
+clean:
+	rm pi
+
+test:
+	./pi
+

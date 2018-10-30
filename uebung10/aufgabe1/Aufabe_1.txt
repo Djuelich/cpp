@@ -1,0 +1,21 @@
+
+1.1
+->Vorteile:
+    -Vermeidung von Codewiederholung(Generischer Code) 
+    -gesteigerte Performance (compile time polymorphism)
+
+->Nachteil:
+    -längere Compilezeit 
+    -erschwerte Fehlersuche
+
+1.2
+
+
+1.3
+->Erklären Sie die Funktionsweise der Singleton-Schablone. 
+    Die Oberklasse SingletonBase ist eine template Klasse mit der sich nach dem Prinzip von
+    „Curiously Recurring Template Pattern“ (CRTP) Singleton Klassen ableiten lassen.    
+
+->Wie muss Sie instanziert werden?
+    Man muss eine Klasse von der SingletonBase ableiten lassen und die Klasse SingletonBase<abgeleitete Klasse>
+    als friend makieren. Nun kann man mit getInstance eine Instanz (einmalig) erzeugen und benutzten.
